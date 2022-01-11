@@ -65,7 +65,7 @@ void BlinkCode::setOutputState(bool state)
     bool s;
     if (this->pin >= 0) {
         s = (this->outputType == BlinkCode::OutputType::NORMAL_LOW) ? state : !state;
-        setGpioState(this->pin, s);
+        setGpioState(this->pin, s ? HIGH : LOW);
     } else {
         this->pulseHandler(this, state);
     }

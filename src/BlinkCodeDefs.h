@@ -11,7 +11,7 @@ constexpr unsigned long DEFAULT_PULSE_SHORT_TIME = 100UL;
 constexpr unsigned long DEFAULT_PULSE_LONG_TIME = 1000UL;
 
 constexpr unsigned long (*getTickValue)() = millis;
-constexpr void (*setGpioState)(int, bool) = digitalWrite;
+constexpr void (*setGpioState)(uint8_t, uint8_t) = digitalWrite;
 
 };
 
